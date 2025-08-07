@@ -1,26 +1,507 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    /* Custom theme colors */
+    --background: rgb(252, 250, 247);
+    --foreground: rgb(13, 5, 3);
+    --secondary: rgb(141, 105, 89);
+    --button: rgb(142, 152, 103);
+    --button-hover: rgb(141, 105, 89);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-secondary: var(--secondary);
+    --color-button: var(--button);
+    --color-button-hover: var(--button-hover);
+    --font-family-sans:
+        var(--font-nunito), "Nunito", "Nunito Placeholder", sans-serif;
+    --font-family-serif:
+        var(--font-nunito), "Nunito", "Nunito Placeholder", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-nunito), "Nunito", "Nunito Placeholder", sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom button styles */
+.btn-primary {
+    background-color: var(--button);
+    color: var(--background);
+    padding: 1.5rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.125rem;
+    min-height: 4rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography utilities */
+.text-secondary {
+    color: var(--secondary);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+    outline: 2px solid var(--button);
+    outline-offset: 2px;
+}
+
+/* Remove default button and input styles */
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Custom styles for hero section */
+.hero-main-text {
+    font-size: 3.25rem; /* 68px */
+    font-weight: 400;
+    line-height: 1.1;
+    font-style: normal;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .hero-main-text {
+        font-size: 2.5rem; /* 40px for mobile */
+    }
+}
+
+/* Rating badge styles */
+.rating-badge {
+    background-color: var(--secondary);
+    color: var(--background);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    height: fit-content;
+    vertical-align: middle;
+}
+
+/* Profile images container */
+.profile-images {
+    display: flex;
+    margin-left: 0;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.profile-images img {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    border: 2px solid var(--background);
+    margin-left: -0.125rem;
+    object-fit: cover;
+}
+
+.profile-images img:first-child {
+    margin-left: 0;
+}
+
+/* Feature cards styling */
+.feature-card {
+    background-color: var(--background);
+    border: 1px solid var(--secondary);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(141, 105, 89, 0.15);
+    border-color: var(--button);
+}
+
+.feature-card-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card-text {
+    color: var(--foreground);
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Hero image container */
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 24rem;
+}
+
+.hero-image-overlay {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.healthy-mind-badge {
+    background-color: var(--secondary);
+    color: var(--background);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    position: relative;
+    font-weight: 600;
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+.healthy-mind-arrow {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid var(--secondary);
+}
+
+/* Overlapping headline styles */
+.overlapping-headline {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-right: -4rem;
+}
+
+.overlapping-text-part {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--background);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-right: 0;
+    margin-bottom: -0.5rem;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    white-space: nowrap;
+    font-family: var(--font-castoro), "Castoro", "Castoro Placeholder", serif;
+    width: fit-content;
+}
+
+.overlapping-text-part:last-child {
+    margin-bottom: 0;
+}
+
+.overlapping-text-part:nth-child(2) {
+    margin-right: 0;
+    margin-left: 0.75rem;
+}
+
+.overlapping-text-part:nth-child(3) {
+    margin-right: 0;
+    margin-left: 1.5rem;
+}
+
+/* Feature overlay within image */
+.feature-overlay {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    z-index: 5;
+}
+
+.feature-overlay-item {
+    background-color: rgba(252, 250, 247, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(141, 105, 89, 0.3);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 120px;
+}
+
+.feature-overlay-item img {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.feature-overlay-text {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--foreground);
+    line-height: 1.2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .hero-main-text {
+        font-size: 3rem;
+    }
+
+    .overlapping-headline {
+        margin-right: -2rem;
+    }
+
+    .overlapping-text-part {
+        padding: 0.5rem 1rem;
+        margin-bottom: -0.375rem;
+    }
+
+    .overlapping-text-part:last-child {
+        margin-bottom: 0;
+    }
+
+    .overlapping-text-part:nth-child(2) {
+        margin-left: 0.5rem;
+    }
+
+    .overlapping-text-part:nth-child(3) {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image-container {
+        max-width: 20rem;
+        margin: 0 auto;
+    }
+
+    .healthy-mind-badge {
+        font-size: 0.75rem;
+        padding: 0.375rem 0.75rem;
+    }
+
+    .feature-card {
+        padding: 0.75rem;
+    }
+
+    .feature-card-text {
+        font-size: 0.75rem;
+    }
+
+    .overlapping-headline {
+        margin-right: 0;
+    }
+
+    .overlapping-text-part {
+        padding: 0.375rem 0.75rem;
+        margin-bottom: -0.25rem;
+    }
+
+    .overlapping-text-part:last-child {
+        margin-bottom: 0;
+    }
+
+    .overlapping-text-part:nth-child(2) {
+        margin-left: 0.25rem;
+    }
+
+    .overlapping-text-part:nth-child(3) {
+        margin-left: 0.5rem;
+    }
+
+    .profile-images img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .feature-overlay {
+        bottom: 0.5rem;
+        right: 0.5rem;
+        gap: 0.25rem;
+    }
+
+    .feature-overlay-item {
+        min-width: 100px;
+        padding: 0.375rem;
+    }
+
+    .feature-overlay-text {
+        font-size: 0.6rem;
+    }
+
+    .hero-main-text {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-main-text {
+        font-size: 1.75rem;
+    }
+
+    .feature-overlay {
+        grid-template-columns: 1fr;
+        max-width: 140px;
+    }
+
+    .feature-overlay-item {
+        min-width: auto;
+    }
+
+    /* Mobile margins */
+    .hero-section-container {
+        padding-left: 1rem;
+        margin-left: 0;
+    }
+
+    .overlapping-headline {
+        margin-right: 0;
+    }
+}
+
+/* Remove problematic margin rules - website should be centered naturally */
+
+/* Mobile spacing utilities */
+@media (max-width: 768px) {
+    .section-spacing {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    .navigation-spacing {
+        height: 4rem;
+    }
+
+    .hero-mobile-spacing {
+        padding-top: 5rem !important;
+        margin-top: 1rem !important;
+    }
+}
+
+/* Section spacing for larger screens */
+@media (min-width: 769px) {
+    .section-spacing {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-spacing {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Additional spacing utilities */
+.therapy-item-spacing {
+    padding: 2rem 0;
+}
+
+@media (min-width: 640px) {
+    .therapy-item-spacing {
+        padding: 2.5rem 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .therapy-item-spacing {
+        padding: 3rem 0;
+    }
+}
+
+/* Right column styles */
+.right-column-heading {
+    font-size: 2.25rem; /* 36px */
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: var(--font-castoro), "Castoro", "Castoro Placeholder", serif;
+}
+
+.right-column-description {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.6;
+    color: var(--secondary);
+    font-family: var(--font-nunito), "Nunito", "Nunito Placeholder", sans-serif;
+}
+
+.renew-overlay {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(2, 2, 2, 0.08);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Responsive adjustments for right column */
+@media (max-width: 768px) {
+    .right-column-heading {
+        font-size: 1.875rem; /* 30px */
+    }
+
+    .right-column-description {
+        font-size: 1rem; /* 16px */
+    }
+
+    .renew-overlay {
+        top: 0.5rem;
+        right: 0.5rem;
+        padding: 0.375rem 0.5rem;
+        font-size: 0.75rem;
+    }
 }
