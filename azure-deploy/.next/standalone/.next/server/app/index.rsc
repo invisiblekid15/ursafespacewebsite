@@ -1,0 +1,37 @@
+1:"$Sreact.fragment"
+2:I[5604,["177","static/chunks/app/layout-eb3c1f20c8b6fbcf.js"],"ContactProvider"]
+3:I[7555,[],""]
+4:I[1295,[],""]
+5:I[2733,["177","static/chunks/app/layout-eb3c1f20c8b6fbcf.js"],"default"]
+6:I[5535,["177","static/chunks/app/layout-eb3c1f20c8b6fbcf.js"],"default"]
+7:I[2355,["741","static/chunks/741-4ec1af47e4a9c91f.js","974","static/chunks/app/page-ee99c66aa91e4cad.js"],"default"]
+8:I[6132,["741","static/chunks/741-4ec1af47e4a9c91f.js","974","static/chunks/app/page-ee99c66aa91e4cad.js"],"default"]
+9:I[3415,["741","static/chunks/741-4ec1af47e4a9c91f.js","974","static/chunks/app/page-ee99c66aa91e4cad.js"],"default"]
+a:I[8047,["741","static/chunks/741-4ec1af47e4a9c91f.js","974","static/chunks/app/page-ee99c66aa91e4cad.js"],"default"]
+b:I[4584,["741","static/chunks/741-4ec1af47e4a9c91f.js","974","static/chunks/app/page-ee99c66aa91e4cad.js"],"default"]
+c:I[7437,["741","static/chunks/741-4ec1af47e4a9c91f.js","974","static/chunks/app/page-ee99c66aa91e4cad.js"],"default"]
+d:I[3102,["741","static/chunks/741-4ec1af47e4a9c91f.js","974","static/chunks/app/page-ee99c66aa91e4cad.js"],"default"]
+e:I[7035,["741","static/chunks/741-4ec1af47e4a9c91f.js","974","static/chunks/app/page-ee99c66aa91e4cad.js"],"default"]
+f:I[1287,["741","static/chunks/741-4ec1af47e4a9c91f.js","974","static/chunks/app/page-ee99c66aa91e4cad.js"],"default"]
+10:I[8921,["741","static/chunks/741-4ec1af47e4a9c91f.js","974","static/chunks/app/page-ee99c66aa91e4cad.js"],"default"]
+11:I[1903,["741","static/chunks/741-4ec1af47e4a9c91f.js","974","static/chunks/app/page-ee99c66aa91e4cad.js"],"default"]
+12:I[6642,["741","static/chunks/741-4ec1af47e4a9c91f.js","974","static/chunks/app/page-ee99c66aa91e4cad.js"],"default"]
+13:I[3009,["741","static/chunks/741-4ec1af47e4a9c91f.js","974","static/chunks/app/page-ee99c66aa91e4cad.js"],"default"]
+14:I[9028,["741","static/chunks/741-4ec1af47e4a9c91f.js","974","static/chunks/app/page-ee99c66aa91e4cad.js"],"default"]
+15:I[9665,[],"OutletBoundary"]
+17:I[4911,[],"AsyncMetadataOutlet"]
+19:I[9665,[],"ViewportBoundary"]
+1b:I[9665,[],"MetadataBoundary"]
+1c:"$Sreact.suspense"
+1e:I[8393,[],""]
+:HL["/_next/static/media/34435f731c8592ca-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/40d40f0f334d7ad1-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/6146a424f10a4bc8-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/fb2bb66fb7bdad73-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/0cd1741f2e547a10.css","style"]
+0:{"P":null,"b":"B0PN_731GWK4zV5pdGKgf","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0cd1741f2e547a10.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_bf878e __variable_b3351a","children":["$","body",null,{"className":"antialiased","children":["$","$L2",null,{"children":[["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L5",null,{}],["$","$L6",null,{}]]}]}]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","main",null,{"className":"min-h-screen bg-background text-foreground","children":[["$","$L7",null,{}],["$","$L8",null,{}],["$","$L9",null,{}],["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{}],["$","$Le",null,{}],["$","$Lf",null,{}],["$","$L10",null,{}],["$","$L11",null,{}],["$","$L12",null,{}],["$","$L13",null,{}],["$","$L14",null,{}],["$","div",null,{"id":"sections-container"}]]}],null,["$","$L15",null,{"children":["$L16",["$","$L17",null,{"promise":"$@18"}]]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$L19",null,{"children":"$L1a"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L1b",null,{"children":["$","div",null,{"hidden":true,"children":["$","$1c",null,{"fallback":null,"children":"$L1d"}]}]}]]}],false]],"m":"$undefined","G":["$1e",[]],"s":false,"S":true}
+1a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+16:null
+1f:I[8175,[],"IconMark"]
+18:{"metadata":[["$","title","0",{"children":"UrSafeSpace"}],["$","meta","1",{"name":"description","content":"A beautiful and responsive one-page website built with Next.js"}],["$","meta","2",{"name":"author","content":"UrSafeSpace Team"}],["$","meta","3",{"name":"keywords","content":"website,nextjs,responsive,modern"}],["$","meta","4",{"name":"robots","content":"index, follow"}],["$","link","5",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","$L1f","6",{}]],"error":null,"digest":"$undefined"}
+1d:"$18:metadata"
