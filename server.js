@@ -2,8 +2,6 @@ const { createServer } = require("http");
 const { parse } = require("url");
 const next = require("next");
 
-// Force deployment trigger - Azure Web App
-
 const dev = process.env.NODE_ENV !== "production";
 const hostname = dev ? "localhost" : "0.0.0.0";
 const port = process.env.PORT || process.env.WEBSITES_PORT || 8080;
