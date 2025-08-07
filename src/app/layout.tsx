@@ -26,8 +26,12 @@ export const metadata: Metadata = {
   description: "A beautiful and responsive one-page website built with Next.js",
   keywords: ["website", "nextjs", "responsive", "modern"],
   authors: [{ name: "UrSafeSpace Team" }],
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 interface Statistic {
   number: string;
@@ -8,35 +8,35 @@ interface Statistic {
 }
 
 const services = [
-  'Therapy',
-  'Counseling',
-  'Wellness',
-  'Support',
-  'Coaching',
-  'Mindfulness',
-  'Crisis Care',
-  'Family Therapy',
-  'Couples Therapy',
-  'Teen Counseling'
+  "Therapy",
+  "Counseling",
+  "Wellness",
+  "Support",
+  "Coaching",
+  "Mindfulness",
+  "Crisis Care",
+  "Family Therapy",
+  "Couples Therapy",
+  "Teen Counseling",
 ];
 
 const statistics: Statistic[] = [
   {
-    number: '300+',
-    description: 'Clients have taken the step toward emotional wellness.'
+    number: "300+",
+    description: "Clients have taken the step toward emotional wellness.",
   },
   {
-    number: '95%',
-    description: 'Notice Improvement Within 3 Sessions completed.'
+    number: "95%",
+    description: "Notice Improvement Within 3 Sessions completed.",
   },
   {
-    number: '12+',
-    description: 'Team of professionals brings deep experience.'
+    number: "12+",
+    description: "Team of professionals brings deep experience.",
   },
   {
-    number: '1000+',
-    description: 'Virtual Sessions Delivered ensuring support is always.'
-  }
+    number: "1000+",
+    description: "Virtual Sessions Delivered ensuring support is always.",
+  },
 ];
 
 export default function Section9() {
@@ -50,16 +50,17 @@ export default function Section9() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -77,14 +78,14 @@ export default function Section9() {
         {/* Services Tags */}
         <div className="mb-16 md:mb-20">
           <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-4xl mx-auto">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <span
                 key={service}
                 className="px-4 py-2 md:px-6 md:py-3 rounded-full border-2 text-sm md:text-base font-medium transition-all duration-300 hover:scale-105"
                 style={{
-                  borderColor: 'rgb(141, 105, 89)',
-                  color: 'rgb(141, 105, 89)',
-                  backgroundColor: 'transparent'
+                  borderColor: "rgb(141, 105, 89)",
+                  color: "rgb(141, 105, 89)",
+                  backgroundColor: "transparent",
                 }}
               >
                 {service}
@@ -100,21 +101,18 @@ export default function Section9() {
               key={index}
               className={`text-center transform transition-all duration-1000 ${
                 isVisible
-                  ? 'translate-y-0 opacity-100'
-                  : 'translate-y-10 opacity-0'
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
               }`}
               style={{
-                transitionDelay: `${index * 200}ms`
+                transitionDelay: `${index * 200}ms`,
               }}
             >
               {/* Animated Number */}
               <div className="mb-4">
                 <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-black">
                   {isVisible && (
-                    <AnimatedNumber
-                      value={stat.number}
-                      delay={index * 200}
-                    />
+                    <AnimatedNumber value={stat.number} delay={index * 200} />
                   )}
                 </span>
               </div>
@@ -137,7 +135,7 @@ interface AnimatedNumberProps {
 }
 
 function AnimatedNumber({ value, delay }: AnimatedNumberProps) {
-  const [displayValue, setDisplayValue] = useState('');
+  const [displayValue, setDisplayValue] = useState("");
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
@@ -176,9 +174,11 @@ function AnimatedNumber({ value, delay }: AnimatedNumberProps) {
   }, [value, delay]);
 
   return (
-    <span className={`inline-block transition-all duration-500 ${
-      isAnimating ? 'scale-110' : 'scale-100'
-    }`}>
+    <span
+      className={`inline-block transition-all duration-500 ${
+        isAnimating ? "scale-110" : "scale-100"
+      }`}
+    >
       {displayValue}
     </span>
   );

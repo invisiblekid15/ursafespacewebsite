@@ -1,21 +1,19 @@
-import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const {
-      name,
-      email,
-      phone,
-      message,
-    } = body;
+    const { name, email, phone, message } = body;
 
     // Validate required fields
     if (!name || !email || !message) {
       return NextResponse.json(
-        { error: 'Missing required fields: name, email, and message are required' },
-        { status: 400 }
+        {
+          error:
+            "Missing required fields: name, email, and message are required",
+        },
+        { status: 400 },
       );
     }
 
@@ -23,14 +21,14 @@ export async function POST(request: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { error: 'Invalid email format' },
-        { status: 400 }
+        { error: "Invalid email format" },
+        { status: 400 },
       );
     }
 
     // Create transporter using Gmail SMTP
-    const transporter = nodemailer.createTransporter({
-      service: 'gmail',
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
       auth: {
         user: process.env.GMAIL_USER,
         pass: process.env.GMAIL_APP_PASSWORD,
@@ -45,12 +43,12 @@ export async function POST(request: NextRequest) {
       <ul>
         <li><strong>Name:</strong> ${name}</li>
         <li><strong>Email:</strong> ${email}</li>
-        <li><strong>Phone:</strong> ${phone || 'Not provided'}</li>
+        <li><strong>Phone:</strong> ${phone || "Not provided"}</li>
       </ul>
 
       <h3>Message:</h3>
       <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 10px 0;">
-        <p>${message.replace(/\n/g, '<br>')}</p>
+        <p>${message.replace(/\n/g, "<br>")}</p>
       </div>
 
       <hr>
@@ -69,7 +67,7 @@ export async function POST(request: NextRequest) {
     const clientMailOptions = {
       from: process.env.GMAIL_USER,
       to: email,
-      subject: 'Support Request Received - UrSafeSpace',
+      subject: "Support Request Received - UrSafeSpace",
       html: `
         <h2>Thank You for Contacting Us</h2>
 
@@ -79,7 +77,7 @@ export async function POST(request: NextRequest) {
 
         <h3>Your Message:</h3>
         <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 10px 0;">
-          <p>${message.replace(/\n/g, '<br>')}</p>
+          <p>${message.replace(/\n/g, "<br>")}</p>
         </div>
 
         <p>If you have any urgent questions or need immediate assistance, please contact us directly at:</p>
@@ -104,21 +102,20 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(
       {
-        message: 'Support request sent successfully',
-        success: true
+        message: "Support request sent successfully",
+        success: true,
       },
-      { status: 200 }
+      { status: 200 },
     );
-
   } catch (error) {
-    console.error('Error sending support request:', error);
+    console.error("Error sending support request:", error);
 
     return NextResponse.json(
       {
-        error: 'Failed to send support request. Please try again later.',
-        success: false
+        error: "Failed to send support request. Please try again later.",
+        success: false,
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

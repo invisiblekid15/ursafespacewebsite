@@ -1,5 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
   try {
@@ -17,8 +17,11 @@ export async function POST(request: NextRequest) {
     // Validate required fields
     if (!name || !email || !serviceType) {
       return NextResponse.json(
-        { error: 'Missing required fields: name, email, and serviceType are required' },
-        { status: 400 }
+        {
+          error:
+            "Missing required fields: name, email, and serviceType are required",
+        },
+        { status: 400 },
       );
     }
 
@@ -26,14 +29,14 @@ export async function POST(request: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { error: 'Invalid email format' },
-        { status: 400 }
+        { error: "Invalid email format" },
+        { status: 400 },
       );
     }
 
     // Create transporter using Gmail SMTP
-    const transporter = nodemailer.createTransporter({
-      service: 'gmail',
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
       auth: {
         user: process.env.GMAIL_USER,
         pass: process.env.GMAIL_APP_PASSWORD,
@@ -48,20 +51,24 @@ export async function POST(request: NextRequest) {
       <ul>
         <li><strong>Name:</strong> ${name}</li>
         <li><strong>Email:</strong> ${email}</li>
-        <li><strong>Phone:</strong> ${phone || 'Not provided'}</li>
+        <li><strong>Phone:</strong> ${phone || "Not provided"}</li>
       </ul>
 
       <h3>Appointment Details:</h3>
       <ul>
         <li><strong>Service Type:</strong> ${serviceType}</li>
-        <li><strong>Preferred Date:</strong> ${preferredDate || 'Not specified'}</li>
-        <li><strong>Preferred Time:</strong> ${preferredTime || 'Not specified'}</li>
+        <li><strong>Preferred Date:</strong> ${preferredDate || "Not specified"}</li>
+        <li><strong>Preferred Time:</strong> ${preferredTime || "Not specified"}</li>
       </ul>
 
-      ${message ? `
+      ${
+        message
+          ? `
       <h3>Additional Notes:</h3>
       <p>${message}</p>
-      ` : ''}
+      `
+          : ""
+      }
 
       <hr>
       <p><em>This appointment request was submitted through the UrSafeSpace website.</em></p>
@@ -79,7 +86,7 @@ export async function POST(request: NextRequest) {
     const clientMailOptions = {
       from: process.env.GMAIL_USER,
       to: email,
-      subject: 'Appointment Request Received - UrSafeSpace',
+      subject: "Appointment Request Received - UrSafeSpace",
       html: `
         <h2>Thank You for Your Appointment Request</h2>
 
@@ -90,8 +97,8 @@ export async function POST(request: NextRequest) {
         <h3>Your Request Details:</h3>
         <ul>
           <li><strong>Service Type:</strong> ${serviceType}</li>
-          <li><strong>Preferred Date:</strong> ${preferredDate || 'Not specified'}</li>
-          <li><strong>Preferred Time:</strong> ${preferredTime || 'Not specified'}</li>
+          <li><strong>Preferred Date:</strong> ${preferredDate || "Not specified"}</li>
+          <li><strong>Preferred Time:</strong> ${preferredTime || "Not specified"}</li>
         </ul>
 
         <p>If you have any immediate questions or need to make changes to your request, please contact us at:</p>
@@ -116,21 +123,20 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(
       {
-        message: 'Appointment request sent successfully',
-        success: true
+        message: "Appointment request sent successfully",
+        success: true,
       },
-      { status: 200 }
+      { status: 200 },
     );
-
   } catch (error) {
-    console.error('Error sending appointment request:', error);
+    console.error("Error sending appointment request:", error);
 
     return NextResponse.json(
       {
-        error: 'Failed to send appointment request. Please try again later.',
-        success: false
+        error: "Failed to send appointment request. Please try again later.",
+        success: false,
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

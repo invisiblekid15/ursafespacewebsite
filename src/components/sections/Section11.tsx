@@ -155,7 +155,7 @@ export default function Section11() {
         {/* Bottom CTA */}
         <div className="text-center mt-12 lg:mt-16">
           <p className="text-gray-600 mb-6">
-            Still have questions? We're here to help.
+            Still have questions? We&apos;re here to help.
           </p>
           <button
             onClick={() => openContactForm("support")}

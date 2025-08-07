@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer
       className="w-full py-12 md:py-16"
-      style={{ backgroundColor: 'rgb(248, 243, 236)' }}
+      style={{ backgroundColor: "rgb(248, 243, 236)" }}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
@@ -29,10 +29,11 @@ export default function Footer() {
             {/* Description */}
             <p
               className="text-base md:text-lg leading-relaxed max-w-md"
-              style={{ color: 'rgb(141, 105, 89)' }}
+              style={{ color: "rgb(141, 105, 89)" }}
             >
-              Your space to heal, grow, and feel understood. Offering compassionate,
-              personalized mental health support to guide life's challenges.
+              Your space to heal, grow, and feel understood. Offering
+              compassionate, personalized mental health support to guide
+              life&apos;s challenges.
             </p>
 
             {/* Instagram Icon */}
@@ -44,7 +45,7 @@ export default function Footer() {
               >
                 <svg
                   className="w-5 h-5"
-                  style={{ color: 'rgb(141, 105, 89)' }}
+                  style={{ color: "rgb(141, 105, 89)" }}
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -88,10 +89,10 @@ export default function Footer() {
 
               {/* Office Hours */}
               <div>
-                <h4 className="font-semibold text-gray-900 mb-1">Office Hours:</h4>
-                <p className="text-gray-700">
-                  Mon–Sat, 9 AM – 7 PM
-                </p>
+                <h4 className="font-semibold text-gray-900 mb-1">
+                  Office Hours:
+                </h4>
+                <p className="text-gray-700">Mon–Sat, 9 AM – 7 PM</p>
               </div>
             </div>
           </div>
