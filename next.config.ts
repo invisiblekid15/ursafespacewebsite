@@ -5,12 +5,7 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
   },
   output: "standalone",
-  experimental: {
-    outputFileTracingRoot: undefined,
-  },
-  env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY,
-  },
+  serverExternalPackages: ["nodemailer"],
   async headers() {
     return [
       {
