@@ -61,6 +61,10 @@ jobs:
           cp startup.sh deployment-package/
           cp .deployment deployment-package/
           cp next.config.js deployment-package/
+          cp tsconfig.json deployment-package/
+          cp postcss.config.mjs deployment-package/
+          cp eslint.config.mjs deployment-package/
+          cp next-env.d.ts deployment-package/
           chmod +x deployment-package/startup.sh
 
           # Verify deployment package
