@@ -43,3 +43,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Azure deployment logs and artifacts
+LogFiles/
+deployments/
+azure-deploy/
+*.zip
+webapp_logs*.zip
+deployment*.zip
+
+# Azure scripts and documentation
+AZURE_*.md
+azure-*.sh
