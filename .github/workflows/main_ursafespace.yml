@@ -54,7 +54,6 @@ jobs:
           cp -r src deployment-package/
           cp -r public deployment-package/
           cp package*.json deployment-package/
-          cp -r node_modules deployment-package/
           cp web.config deployment-package/
           cp server.js deployment-package/
           cp run.js deployment-package/
