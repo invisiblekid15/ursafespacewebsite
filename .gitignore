@@ -44,6 +44,13 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Deployment artifacts
+deployment-package/
+*.zip
+deploy.zip
+minimal.zip
+fast-deploy.zip
+
 # Azure deployment logs and artifacts
 LogFiles/
 deployments/
