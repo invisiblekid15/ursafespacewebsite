@@ -1,4 +1,5 @@
 import HeroSection from "@/components/sections/HeroSection";
+import MarqueeSection from "@/components/sections/MarqueeSection";
 import Section2 from "@/components/sections/Section2";
 import Section3 from "@/components/sections/Section3";
 import Section4 from "@/components/sections/Section4";
@@ -21,6 +22,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <HeroSection />
+
+      {/* Marquee Section */}
+      <MarqueeSection />
 
       {/* Section 2 */}
       <Section2 />
