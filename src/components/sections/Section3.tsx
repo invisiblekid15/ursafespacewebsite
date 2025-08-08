@@ -28,16 +28,16 @@ const therapyServices: TherapyService[] = [
   {
     id: 3,
     icon: "/assets/images/icons/rose.svg",
-    title: "Family Therapy",
+    title: "For Men",
     description:
-      "Support for families navigating conflict, change, or emotional struggles — creating healthier, more connected relationships.",
+      "Men's Counseling: Tailored sessions focusing on issues common to men, such as career pressures, emotional suppression, and relationship challenges, in a confidential and supportive environment.",
   },
   {
     id: 4,
     icon: "/assets/images/icons/fan.svg",
-    title: "Youth Counseling",
+    title: "For Women",
     description:
-      "Age-appropriate support for children and teens dealing with school stress, self-esteem issues, or emotional concerns.",
+      "Women's Counseling: Empathetic and confidential support for women navigating specific concerns like work-life balance, body image issues, postpartum depression, and family dynamics.",
   },
 ];
 

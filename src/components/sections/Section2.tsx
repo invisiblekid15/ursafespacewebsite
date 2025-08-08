@@ -177,11 +177,11 @@ const Section2: React.FC = () => {
                           'var(--font-nunito), "Nunito", "Nunito Placeholder", sans-serif',
                       }}
                     >
-                      <p className="font-semibold text-sm sm:text-base">12+</p>
+                      <p className="font-bold text-3xl sm:text-4xl">12+</p>
                       <p className="font-semibold text-sm sm:text-base">
                         Licensed Counselors
                       </p>
-                      <p className="font-semibold text-sm sm:text-base">50+</p>
+                      <p className="font-bold text-3xl sm:text-4xl">50+</p>
                       <p className="font-semibold text-sm sm:text-base">
                         Years of Combined
                       </p>

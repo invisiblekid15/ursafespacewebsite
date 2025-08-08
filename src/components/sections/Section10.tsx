@@ -21,55 +21,89 @@ const CheckIcon = () => (
 interface PricingTier {
   name: string;
   description: string;
-  monthlyPrice: number;
-  yearlyPrice: number;
+  price: number;
+  originalPrice?: number;
   features: string[];
   isPopular?: boolean;
 }
 
-const pricingTiers: PricingTier[] = [
+const individualTiers: PricingTier[] = [
   {
-    name: "Starter session",
-    description: "Perfect for those exploring therapy for the first time.",
-    monthlyPrice: 49,
-    yearlyPrice: 39,
+    name: "1 Month",
+    description: "Monthly commitment",
+    price: 90,
     features: [
-      "Dedicated therapist",
-      "Online or in-person",
-      "Personalized goal-setting",
-      "Access to client portal",
+      "1 thirty minute virtual session per week",
+      "Personalized learning path",
+      "Exclusive Science-backed tools and exercises",
     ],
   },
   {
-    name: "Growth session",
-    description: "Perfect for those exploring therapy for the first time.",
-    monthlyPrice: 89,
-    yearlyPrice: 69,
+    name: "3 Months",
+    description: "Save $15 per session",
+    price: 75,
+    originalPrice: 90,
     features: [
-      "Dedicated therapist",
-      "Online or in-person",
-      "Personalized goal-setting",
-      "Access to client portal",
+      "1 thirty minute virtual session per week",
+      "Personalized learning path",
+      "Exclusive Science-backed tools and exercises",
     ],
     isPopular: true,
   },
   {
-    name: "Complete session",
-    description: "Perfect for those exploring therapy for the first time.",
-    monthlyPrice: 229,
-    yearlyPrice: 189,
+    name: "6 Months",
+    description: "Best value - Save $28 per session",
+    price: 62,
+    originalPrice: 90,
     features: [
-      "Dedicated therapist",
-      "Online or in-person",
-      "Personalized goal-setting",
-      "Access to client portal",
+      "1 thirty minute virtual session per week",
+      "Personalized learning path",
+      "Exclusive Science-backed tools and exercises",
+    ],
+  },
+];
+
+const coupleTiers: PricingTier[] = [
+  {
+    name: "1 Month",
+    description: "Monthly commitment",
+    price: 120,
+    features: [
+      "1 forty minute virtual session per week for you and your partner",
+      "Personalized learning path",
+      "Exclusive Science-backed tools and exercises",
+    ],
+  },
+  {
+    name: "3 Months",
+    description: "Save $20 per session",
+    price: 100,
+    originalPrice: 120,
+    features: [
+      "1 forty minute virtual session per week for you and your partner",
+      "Personalized learning path",
+      "Exclusive Science-backed tools and exercises",
+    ],
+    isPopular: true,
+  },
+  {
+    name: "6 Months",
+    description: "Best value - Save $37 per session",
+    price: 83,
+    originalPrice: 120,
+    features: [
+      "1 forty minute virtual session per week for you and your partner",
+      "Personalized learning path",
+      "Exclusive Science-backed tools and exercises",
     ],
   },
 ];
 
 export default function Section10() {
-  const [isYearly, setIsYearly] = useState(false);
+  const [isCouple, setIsCouple] = useState(false);
   const { openContactForm } = useContact();
+
+  const currentTiers = isCouple ? coupleTiers : individualTiers;
 
   return (
     <section className="w-full py-16 md:py-24 bg-gray-50">
@@ -91,40 +125,37 @@ export default function Section10() {
             Simple, Transparent Pricing
           </h2>
 
-          {/* Monthly/Yearly Toggle */}
+          {/* Individual/Couple Toggle */}
           <div className="flex items-center justify-center gap-4 mb-12">
             <span
-              className={`text-sm md:text-base font-medium ${!isYearly ? "text-gray-900" : "text-gray-500"}`}
+              className={`text-sm md:text-base font-medium ${!isCouple ? "text-gray-900" : "text-gray-500"}`}
             >
-              Monthly
+              Individual
             </span>
             <button
-              onClick={() => setIsYearly(!isYearly)}
+              onClick={() => setIsCouple(!isCouple)}
               className={`relative w-14 h-7 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-300 ${
-                isYearly ? "bg-orange-400" : "bg-gray-300"
+                isCouple ? "bg-orange-400" : "bg-gray-300"
               }`}
-              aria-label="Toggle pricing period"
+              aria-label="Toggle between Individual and Couple pricing"
             >
               <div
                 className={`absolute top-0.5 w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300 ${
-                  isYearly ? "translate-x-7" : "translate-x-0.5"
+                  isCouple ? "translate-x-7" : "translate-x-0.5"
                 }`}
               />
             </button>
             <span
-              className={`text-sm md:text-base font-medium ${isYearly ? "text-gray-900" : "text-gray-500"}`}
+              className={`text-sm md:text-base font-medium ${isCouple ? "text-gray-900" : "text-gray-500"}`}
             >
-              Yearly
-              <span className="ml-1 text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">
-                Save 20%
-              </span>
+              Couple
             </span>
           </div>
         </div>
 
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {pricingTiers.map((tier) => (
+          {currentTiers.map((tier) => (
             <div
               key={tier.name}
               className={`relative bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl ${
@@ -154,14 +185,14 @@ export default function Section10() {
               <div className="text-center mb-8">
                 <div className="flex items-baseline justify-center">
                   <span className="text-4xl md:text-5xl font-bold text-gray-900">
-                    ${isYearly ? tier.yearlyPrice : tier.monthlyPrice}
+                    ${tier.price}
                   </span>
                   <span className="text-gray-500 ml-1 text-lg">/session</span>
                 </div>
-                {isYearly && (
+                {tier.originalPrice && (
                   <p className="text-sm text-gray-500 mt-2">
-                    <span className="line-through">${tier.monthlyPrice}</span>{" "}
-                    monthly
+                    <span className="line-through">${tier.originalPrice}</span>{" "}
+                    regular price
                   </p>
                 )}
               </div>

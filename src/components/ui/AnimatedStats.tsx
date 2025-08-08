@@ -13,38 +13,24 @@ interface StatItem {
 const stats: StatItem[] = [
   {
     id: 1,
-    percentage: "95%",
-    title: "Feeling Better in Just 3 Sessions",
+    percentage: "87%",
+    title: "feel more equipped to handle stress",
     description:
-      "Steps toward mental clarity and emotional peace. It's not just talk — it's progress.",
+      "Our clients report significantly improved stress management skills and emotional resilience.",
   },
   {
     id: 2,
-    percentage: "150%",
-    title: "Licensed Counselors",
+    percentage: "94%",
+    title: "have learned new coping mechanisms within first 4 sessions",
     description:
-      "Mental clarity and emotional peace aren't distant dreams real outcomes.",
+      "Most clients develop practical tools and strategies quickly, leading to immediate improvements.",
   },
   {
     id: 3,
-    percentage: "200%",
-    title: "Feeling Better in Just 3 Sessions",
+    percentage: "96%",
+    title: "have a better understanding of their emotions",
     description:
-      "Talking through is important, but transformation happens through action.",
-  },
-  {
-    id: 4,
-    percentage: "300%",
-    title: "Notice Improvement Within 3 Sessions",
-    description:
-      "We don't just offer conversations you toward tangible clarity emotional ease.",
-  },
-  {
-    id: 5,
-    percentage: "250%",
-    title: "Years of Combined Experience",
-    description:
-      "We don't just offer conversations — we gui toward tangible clarity and emotional.",
+      "Through our personalized approach, clients gain deep insights into their emotional patterns and triggers.",
   },
 ];
 
