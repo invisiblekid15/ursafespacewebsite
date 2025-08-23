@@ -100,9 +100,25 @@ export default function Footer() {
 
         {/* Bottom Border / Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-300">
-          <p className="text-center text-sm text-gray-600">
-            © 2024 UrSafeSpace. All rights reserved.
-          </p>
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-sm text-gray-600">
+              © 2024 UrSafeSpace. All rights reserved.
+            </p>
+            <div className="flex space-x-6">
+              <a
+                href="/crisis-resources"
+                className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-300"
+              >
+                Crisis Resources
+              </a>
+              <a
+                href="/privacy-policy"
+                className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-300"
+              >
+                Privacy Policy
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

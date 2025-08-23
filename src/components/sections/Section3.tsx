@@ -12,20 +12,6 @@ interface TherapyService {
 
 const therapyServices: TherapyService[] = [
   {
-    id: 1,
-    icon: "/assets/images/icons/heal.svg",
-    title: "Individual Therapy",
-    description:
-      "Personalized one-on-one sessions to help you manage anxiety, depression, stress, or life transitions in a safe, judgment-free space.",
-  },
-  {
-    id: 2,
-    icon: "/assets/images/icons/sun.svg",
-    title: "Couples Counseling",
-    description:
-      "Strengthen communication, rebuild trust, and navigate relationship challenges with the help of an experienced counselor.",
-  },
-  {
     id: 3,
     icon: "/assets/images/icons/rose.svg",
     title: "For Men",
@@ -38,6 +24,13 @@ const therapyServices: TherapyService[] = [
     title: "For Women",
     description:
       "Women's Counseling: Empathetic and confidential support for women navigating specific concerns like work-life balance, body image issues, postpartum depression, and family dynamics.",
+  },
+  {
+    id: 2,
+    icon: "/assets/images/icons/sun.svg",
+    title: "Couples Counseling",
+    description:
+      "Strengthen communication, rebuild trust, and navigate relationship challenges with the help of an experienced counselor.",
   },
 ];
 

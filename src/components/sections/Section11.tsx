@@ -17,7 +17,7 @@ const faqs: FAQ[] = [
   {
     question: "How Does It Work?",
     answer:
-      "During our program you'll work with a trained professional therapist/counsellor/psychologist who can offer a wide variety of evidence-based therapeutic coaching. In between your sessions, you'll receive self help tools and exercises that target your specific needs and goals. In between your sessions, you'll receive weekly content with science based knowledge and exercises focused on your specific needs and goals.\n\nThe sessions with your dedicated Specialist will help you integrate what you learned into everyday life.",
+      "During our program you'll work with a trained professional therapist/counsellor/psychologist who can offer a wide variety of evidence-based therapeutic coaching. In between your sessions, you'll receive self help tools and exercises that target your specific needs and goals.\n\nThe sessions with your dedicated Specialist will help you integrate what you learned into everyday life.",
   },
   {
     question: "Is this Therapy?",
@@ -27,7 +27,7 @@ const faqs: FAQ[] = [
   {
     question: "How Long Does the Program Take?",
     answer:
-      "That's up to you. We believe in a clear end game, so we divided our content into units we call Pathways, and we match you with the Pathway that suits your goals and needs. Most members take about 1-2 months with each Pathway, and they usually move on to at least one more once they are done.",
+      "You will start overcoming the challenges after the first 4 sessions. However generally the issues are layered up which means you might join therapy for Infidelity related issues but once you deep dive the issue could be stemming from childhood traumas. So ideally we should work on childhood traumas so that it resolves our Infidelity issues.",
   },
 ];
 

@@ -117,8 +117,7 @@ const Section4: React.FC = () => {
                       'var(--font-nunito), "Nunito", "Nunito Placeholder", sans-serif',
                   }}
                 >
-                  When you arrive—either in person or virtually—you&apos;ll be
-                  environment.
+                  See real difference in your life rather than just subjective goals.
                 </p>
               </div>
             </div>
@@ -137,7 +136,7 @@ const Section4: React.FC = () => {
                 }}
                 onClick={() => openContactForm("appointment")}
               >
-                Book an appointment
+                Free 15 min consultation
               </Button>
             </div>
           </div>

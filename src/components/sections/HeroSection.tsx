@@ -106,7 +106,7 @@ const HeroSection: React.FC = () => {
                 }}
                 onClick={() => openContactForm("appointment")}
               >
-                Book an appointment
+                Free 15 min consultation
               </Button>
             </div>
 
