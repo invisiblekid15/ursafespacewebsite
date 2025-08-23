@@ -22,7 +22,7 @@ const services = [
 
 const statistics: Statistic[] = [
   {
-    number: "300+",
+    number: "1000+",
     description: "Clients have taken the step toward emotional wellness.",
   },
   {

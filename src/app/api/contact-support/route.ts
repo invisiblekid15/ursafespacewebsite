@@ -82,8 +82,7 @@ export async function POST(request: NextRequest) {
 
         <p>If you have any urgent questions or need immediate assistance, please contact us directly at:</p>
         <ul>
-          <li><strong>Email:</strong> hello@serenityminds.com</li>
-          <li><strong>Phone:</strong> +1 (123) 456-7890</li>
+          <li><strong>Phone:</strong> ‪+61 431 879 584‬</li>
         </ul>
 
         <p>We're here to help and support you.</p>

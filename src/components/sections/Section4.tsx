@@ -22,7 +22,7 @@ const Section4: React.FC = () => {
           {/* Left Side - Image */}
           <div className="order-2 lg:order-1">
             <Image
-              src="/assets/images/section_4/section_4.avif"
+              src="/assets/images/section_4/section_4.jpeg"
               alt="Mental health support"
               width={600}
               height={500}
@@ -117,7 +117,8 @@ const Section4: React.FC = () => {
                       'var(--font-nunito), "Nunito", "Nunito Placeholder", sans-serif',
                   }}
                 >
-                  See real difference in your life rather than just subjective goals.
+                  See real difference in your life rather than just subjective
+                  goals.
                 </p>
               </div>
             </div>

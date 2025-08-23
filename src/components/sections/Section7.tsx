@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Section7() {
   return (
@@ -12,7 +12,7 @@ export default function Section7() {
           <div className="inline-block mb-4">
             <span
               className="text-sm md:text-base font-medium px-4 py-2 rounded-full"
-              style={{ backgroundColor: 'rgba(225, 147, 125, 0.4)' }}
+              style={{ backgroundColor: "rgba(225, 147, 125, 0.4)" }}
             >
               Why It&apos;s Worth It
             </span>
@@ -31,7 +31,7 @@ export default function Section7() {
             {/* Top Left */}
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
               <Image
-                src="/assets/images/section_7/section_7_top_left.avif"
+                src="/assets/images/section_7/section_7_top_left.jpeg"
                 alt="UrSafeSpace interior - top left view"
                 fill
                 className="object-cover"
@@ -42,7 +42,7 @@ export default function Section7() {
             {/* Top Right */}
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
               <Image
-                src="/assets/images/section_7/section_7_top_right.avif"
+                src="/assets/images/section_7/section_7_top_right.jpeg"
                 alt="UrSafeSpace interior - top right view"
                 fill
                 className="object-cover"
@@ -56,7 +56,7 @@ export default function Section7() {
             {/* Bottom Left */}
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
               <Image
-                src="/assets/images/section_7/section_7_bottom_left.avif"
+                src="/assets/images/section_7/section_7_bottom_left.jpeg"
                 alt="UrSafeSpace interior - bottom left view"
                 fill
                 className="object-cover"
@@ -67,7 +67,7 @@ export default function Section7() {
             {/* Bottom Middle */}
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
               <Image
-                src="/assets/images/section_7/section_7_bottom_middle.avif"
+                src="/assets/images/section_7/section_7_bottom_middle.jpeg"
                 alt="UrSafeSpace interior - bottom middle view"
                 fill
                 className="object-cover"
@@ -78,7 +78,7 @@ export default function Section7() {
             {/* Bottom Right */}
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
               <Image
-                src="/assets/images/section_7/Section_7_bottom_right.avif"
+                src="/assets/images/section_7/Section_7_bottom_right.jpeg"
                 alt="UrSafeSpace interior - bottom right view"
                 fill
                 className="object-cover"

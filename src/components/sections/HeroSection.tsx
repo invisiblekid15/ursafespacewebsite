@@ -145,7 +145,7 @@ const HeroSection: React.FC = () => {
                     'var(--font-nunito), "Nunito", "Nunito Placeholder", sans-serif',
                 }}
               >
-                <span className="font-semibold text-[rgb(13,5,3)]">300+</span>
+                <span className="font-semibold text-[rgb(13,5,3)]">1000+</span>
                 <span className="ml-1">
                   Individuals who have trusted UrSafeSpace
                 </span>

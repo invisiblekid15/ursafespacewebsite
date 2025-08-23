@@ -6,6 +6,31 @@ import Image from "next/image";
 const MarqueeSection = () => {
   const marqueeImages = [
     {
+      src: "/assets/images/marquee/Huffpost-modified-removebg-preview.png",
+      alt: "HuffPost",
+      name: "HuffPost",
+    },
+    {
+      src: "/assets/images/marquee/PsychCentral-modified-removebg-preview.png",
+      alt: "Psych Central",
+      name: "Psych Central",
+    },
+    {
+      src: "/assets/images/marquee/TLC-modified-removebg-preview.png",
+      alt: "TLC",
+      name: "TLC",
+    },
+    {
+      src: "/assets/images/marquee/Verywellmind-modified-removebg-preview.png",
+      alt: "Verywell Mind",
+      name: "Verywell Mind",
+    },
+    {
+      src: "/assets/images/marquee/Mindbodygreen-modified-removebg-preview.png",
+      alt: "Mind Body Green",
+      name: "Mind Body Green",
+    },
+    {
       src: "/assets/images/marquee/Bustle-modified-removebg-preview.png",
       alt: "Bustle",
       name: "Bustle",
@@ -26,24 +51,14 @@ const MarqueeSection = () => {
       name: "Her Campus",
     },
     {
-      src: "/assets/images/marquee/Huffpost-modified-removebg-preview.png",
-      alt: "HuffPost",
-      name: "HuffPost",
-    },
-    {
-      src: "/assets/images/marquee/Hum nutrition-modified.jpeg",
+      src: "/assets/images/marquee/Hum nutrition-modified.png",
       alt: "Hum Nutrition",
       name: "Hum Nutrition",
     },
     {
-      src: "/assets/images/marquee/InsideHook-modified.jpeg",
+      src: "/assets/images/marquee/InsideHook-modified.png",
       alt: "InsideHook",
       name: "InsideHook",
-    },
-    {
-      src: "/assets/images/marquee/Mindbodygreen-modified-removebg-preview.png",
-      alt: "Mind Body Green",
-      name: "Mind Body Green",
     },
     {
       src: "/assets/images/marquee/One Community-modified-modified.png",
@@ -51,24 +66,9 @@ const MarqueeSection = () => {
       name: "One Community",
     },
     {
-      src: "/assets/images/marquee/PsychCentral-modified-removebg-preview.png",
-      alt: "Psych Central",
-      name: "Psych Central",
-    },
-    {
       src: "/assets/images/marquee/Saatva-modified-removebg-preview.png",
       alt: "Saatva",
       name: "Saatva",
-    },
-    {
-      src: "/assets/images/marquee/TLC-modified-removebg-preview.png",
-      alt: "TLC",
-      name: "TLC",
-    },
-    {
-      src: "/assets/images/marquee/Verywellmind-modified-removebg-preview.png",
-      alt: "Verywell Mind",
-      name: "Verywell Mind",
     },
   ];
 

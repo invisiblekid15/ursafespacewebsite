@@ -8,7 +8,7 @@ const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
+    phone: "+61 ",
     message: "",
     preferredDate: "",
     preferredTime: "",
@@ -63,7 +63,7 @@ const ContactForm: React.FC = () => {
         setFormData({
           name: "",
           email: "",
-          phone: "",
+          phone: "+61 ",
           message: "",
           preferredDate: "",
           preferredTime: "",
@@ -83,7 +83,7 @@ const ContactForm: React.FC = () => {
     setFormData({
       name: "",
       email: "",
-      phone: "",
+      phone: "+61 ",
       message: "",
       preferredDate: "",
       preferredTime: "",
@@ -220,7 +220,7 @@ const ContactForm: React.FC = () => {
                   value={formData.phone}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-300 focus:border-transparent transition-all"
-                  placeholder="Enter your phone number"
+                  placeholder="+61 4XX XXX XXX"
                 />
               </div>
 
@@ -247,8 +247,6 @@ const ContactForm: React.FC = () => {
                       <option value="individual">Individual Therapy</option>
                       <option value="couples">Couples Counseling</option>
                       <option value="family">Family Therapy</option>
-                      <option value="youth">Youth Counseling</option>
-                      <option value="crisis">Crisis Care</option>
                       <option value="wellness">Wellness Coaching</option>
                     </select>
                   </div>

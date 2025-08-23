@@ -9,21 +9,18 @@ export default function Footer() {
       style={{ backgroundColor: "rgb(248, 243, 236)" }}
     >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-          {/* Left Side */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          {/* Left Side - Logo and Description */}
           <div className="space-y-6">
             {/* Logo and Brand Name */}
             <div className="flex items-center gap-3">
               <Image
-                src="/assets/images/heal.svg"
+                src="/logo.jpeg"
                 alt="UrSafeSpace Logo"
-                width={32}
-                height={32}
-                className="w-8 h-8"
+                width={100}
+                height={26}
+                className="h-6 w-auto"
               />
-              <span className="text-xl md:text-2xl font-bold text-gray-900">
-                UrSafeSpace
-              </span>
             </div>
 
             {/* Description */}
@@ -56,7 +53,43 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Right Side */}
+          {/* Middle - Privacy Policy and Other Links */}
+          <div className="space-y-6">
+            {/* Privacy Policy */}
+            <div className="flex justify-center">
+              <a
+                href="/privacy-policy"
+                className="text-sm text-gray-700 hover:text-gray-900 transition-colors duration-300 underline"
+              >
+                Privacy Policy
+              </a>
+            </div>
+
+            {/* Space for additional pages */}
+            <div className="flex justify-center space-y-2">
+              {/* Add more page links here as needed */}
+            </div>
+
+            {/* Spacer for desktop to push crisis text down */}
+            <div className="hidden md:block md:h-12"></div>
+
+            {/* Crisis Resources */}
+            <div className="space-y-4">
+              <p className="text-sm text-gray-700 leading-relaxed">
+                If you are in crisis or experiencing suicidal or homicidal
+                thoughts, please contact 000 or access{" "}
+                <a
+                  href="/crisis-resources"
+                  className="text-gray-900 hover:text-gray-700 transition-colors duration-300 underline"
+                >
+                  these resources
+                </a>{" "}
+                for emergency assistance.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Side - Get in Touch */}
           <div className="space-y-6">
             {/* Get in Touch Heading */}
             <h3 className="text-xl md:text-2xl font-bold text-gray-900">
@@ -66,24 +99,16 @@ export default function Footer() {
             {/* Contact Information */}
             <div className="space-y-4">
               {/* Email */}
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                <a
-                  href="mailto:hello@serenityminds.com"
-                  className="text-gray-700 hover:text-gray-900 transition-colors duration-300"
-                >
-                  hello@serenityminds.com
-                </a>
-              </div>
+              <div></div>
 
               {/* Phone */}
               <div>
                 <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
                 <a
-                  href="tel:+11234567890"
+                  href="tel:‪+61431879584‬"
                   className="text-gray-700 hover:text-gray-900 transition-colors duration-300"
                 >
-                  +1 (123) 456-7890
+                  ‪+61 431 879 584‬
                 </a>
               </div>
 
@@ -98,26 +123,59 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Border / Copyright */}
+        {/* Disclaimers Section */}
         <div className="mt-12 pt-8 border-t border-gray-300">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {/* Aboriginal and TSI Acknowledgment */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-4">
+                <Image
+                  src="/assets/images/footer/aboriginal.webp"
+                  alt="Aboriginal Flag"
+                  width={60}
+                  height={40}
+                  className="w-15 h-10"
+                />
+                <Image
+                  src="/assets/images/footer/tsi.webp"
+                  alt="Torres Strait Islander Flag"
+                  width={60}
+                  height={40}
+                  className="w-15 h-10"
+                />
+              </div>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Ur Safespace acknowledges the Traditional Owners of the lands on
+                which we operate, and we pay our respects to Elders past,
+                present, and emerging.
+              </p>
+            </div>
+
+            {/* Pride and Inclusion */}
+            <div className="space-y-4">
+              <div className="flex items-center">
+                <Image
+                  src="/assets/images/footer/pride.webp"
+                  alt="Pride Flag"
+                  width={60}
+                  height={40}
+                  className="w-15 h-10"
+                />
+              </div>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Ur Safespace respects and welcomes people of all backgrounds,
+                genders, sexualities, abilities and cultures.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Border / Copyright */}
+        <div className="mt-8 pt-8 border-t border-gray-300">
+          <div className="flex justify-center items-center">
             <p className="text-sm text-gray-600">
               © 2024 UrSafeSpace. All rights reserved.
             </p>
-            <div className="flex space-x-6">
-              <a
-                href="/crisis-resources"
-                className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-300"
-              >
-                Crisis Resources
-              </a>
-              <a
-                href="/privacy-policy"
-                className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-300"
-              >
-                Privacy Policy
-              </a>
-            </div>
           </div>
         </div>
       </div>
