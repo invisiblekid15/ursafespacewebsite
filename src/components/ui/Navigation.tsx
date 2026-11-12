@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "./Button";
 import { useContact } from "@/context/ContactContext";
 
@@ -10,16 +11,18 @@ const Navigation: React.FC = () => {
   return (
     <nav className="navigation-spacing fixed top-0 left-0 right-0 z-50 bg-[rgb(252,250,247)]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-18">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Image
-              src="/logo.png"
-              alt="UrSafeSpace Logo"
-              width={120}
-              height={30}
-              className="h-8 w-auto"
-            />
+            <Link href="/" className="cursor-pointer">
+              <Image
+                src="/logo.png"
+                alt="UrSafeSpace Logo"
+                width={80}
+                height={24}
+                className="h-6 w-auto max-h-12 object-contain"
+              />
+            </Link>
           </div>
 
           {/* CTA Button */}

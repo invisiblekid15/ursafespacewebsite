@@ -15,7 +15,7 @@ export default function Footer() {
             {/* Logo and Brand Name */}
             <div className="flex items-center gap-3">
               <Image
-                src="/logo.jpeg"
+                src="/logo.png"
                 alt="UrSafeSpace Logo"
                 width={100}
                 height={26}
@@ -36,7 +36,7 @@ export default function Footer() {
             {/* Instagram Icon */}
             <div className="pt-2">
               <a
-                href="#"
+                href="https://www.instagram.com/ursafespaceofficial"
                 className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white hover:bg-gray-100 transition-colors duration-300 shadow-sm"
                 aria-label="Follow us on Instagram"
               >

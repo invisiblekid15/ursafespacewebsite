@@ -103,7 +103,6 @@ export async function POST(request: NextRequest) {
 
         <p>If you have any immediate questions or need to make changes to your request, please contact us at:</p>
         <ul>
-          <li><strong>Email:</strong> hello@serenityminds.com</li>
           <li><strong>Phone:</strong> ‪+61 431 879 584‬</li>
         </ul>
 
